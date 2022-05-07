@@ -2,3 +2,6 @@
 <h1 class='title'><%= @products.title  %></h1>
 <h3 class="description"><%= @products.description %></h3>
 <span class="price"><%= @products.price %>$</span>
+<div>
+  <%= link_to 'Editar producto', edit_product_path %>
+</div>
