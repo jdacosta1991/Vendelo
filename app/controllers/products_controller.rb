@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-  @products = Product.find(params[:id])
+  @product = Product.find(params[:id])
   end
 
   def new
@@ -37,10 +37,18 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy 
+
+    redirect_to products_path, notice: 'Tu producto se elimino correctamente', status: :see_other
+
+  end
+
   private
   #whitelist
   def product_params
-    params.require(:product).permit(:title, :description, :price)
+    params.require(:product).permit(:title, :description, :price, :photo)
   end
 
 end

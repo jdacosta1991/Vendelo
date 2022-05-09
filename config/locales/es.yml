@@ -1,0 +1,10 @@
+es:
+  products:
+    index:
+      title: 'Lista de productos'
+    show:
+      title: 'Informacion de producto'
+    edit:
+      title: 'Editar producto'
+    new:
+      title: 'Agregar producto'
